@@ -1,0 +1,6 @@
+WigoTokenSale.deployed().then(function(i) { tokenSale = i; })
+WigoToken.deployed().then(function(i) { token = i; })
+web3.eth.getAccounts().then(function(acc){ accounts = acc })
+accounts[0]
+admin = accounts[0]
+token.transfer(tokenSale.address, 75000, { from: admin })
